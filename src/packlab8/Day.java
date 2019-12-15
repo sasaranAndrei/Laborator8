@@ -25,6 +25,7 @@ public class Day {
         this.workingDay = workDay;
     }
 
+
     public Boolean isWorkingDay (){
         return this.workingDay;
     }

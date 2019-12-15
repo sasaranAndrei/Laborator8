@@ -22,13 +22,38 @@ public class WorkCalendar {
         return days;
     }
 
+    public void setDay (String dayName, Boolean dayNameWork){
+        for (int i =  0; i < days.length; i++){
+            if (days[i].getName() == dayName){
+                days[i].setWorkDay(dayNameWork);
+            }
+        }
+    }
+
+    public Boolean isWorkingDay (String dayName) {
+        for (int i = 0; i < days.length; i++) {
+            if (days[i].getName() == dayName) {
+                return days[i].isWorkingDay();
+            }
+        }
+        return false;
+    }
+
     public void setDays(Day[] days) {
         this.days = days;
     }
 
     public void printCalendar (){
         for (int i = 0; i < this.days.length; i++){
-            System.out.println(days[i].getName());
+
+            System.out.print(days[i].getName());
+
+            if (days[i].isWorkingDay() == true){
+                System.out.println(" work :(");
+            }
+            else {
+                System.out.println(" not work :)");
+            }
         }
     }
 }
