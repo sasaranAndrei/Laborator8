@@ -63,7 +63,6 @@ public class MainClass {
         finally {
             System.out.println("here!");
         }
-       */
 
         MyException e = new MyException("myString");
         try{
@@ -71,6 +70,20 @@ public class MainClass {
         }
         catch (Exception g){
             System.out.println("Hopa!");
+        }
+       */
+        Clasa6 ex = new Clasa6();
+        try{
+            ex.g();
+        }
+        catch (Exception e){
+            if (e instanceof MyException){
+                System.out.println("My exception");
+            }
+            else
+                if (e instanceof NotWorkingDayException){
+                    System.out.println("not working");
+                }
         }
 
     }
