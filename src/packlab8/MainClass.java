@@ -52,7 +52,6 @@ public class MainClass {
         catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Out of index !");
         }
-        */
 
         Exception e = new Exception("!!!!!");
         try{
@@ -64,7 +63,15 @@ public class MainClass {
         finally {
             System.out.println("here!");
         }
+       */
 
+        MyException e = new MyException("myString");
+        try{
+            e.printString();
+        }
+        catch (Exception g){
+            System.out.println("Hopa!");
+        }
 
     }
 }
