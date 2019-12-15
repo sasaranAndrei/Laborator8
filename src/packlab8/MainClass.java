@@ -42,7 +42,6 @@ public class MainClass {
         catch (Exception e){
             System.out.println("Exception intercepted !");
         }
-        */
 
         try{
             for (int i = 0; i <= days.length; i++){
@@ -53,6 +52,19 @@ public class MainClass {
         catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Out of index !");
         }
+        */
+
+        Exception e = new Exception("!!!!!");
+        try{
+            throw  e;
+        }
+        catch (Exception ex) {
+            System.out.println(e.getMessage());
+        }
+        finally {
+            System.out.println("here!");
+        }
+
 
     }
 }
